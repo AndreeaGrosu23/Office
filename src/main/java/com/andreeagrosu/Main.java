@@ -1,7 +1,5 @@
 package com.andreeagrosu;
 
-import java.sql.SQLOutput;
-
 public class Main {
 
     public static void main (String[] args) {
@@ -10,17 +8,17 @@ public class Main {
 
         EmployeeFactory employeeFactory = new EmployeeFactory();
 
-        Employee salespeople1= employeeFactory.createEmployee("Vasile Ion", GroupName.SALES);
+        Employee salespeople1= employeeFactory.createEmployee("John Grisham", GroupName.SALES);
 
-        Employee officeWorker1= employeeFactory.createEmployee("Gheorghe Ion", GroupName.OFFICE);
+        Employee officeWorker1= employeeFactory.createEmployee("Amber Daze", GroupName.OFFICE);
 
-        Employee groupLead1= employeeFactory.createEmployee("Bogdan Ion", GroupName.GROUPLEAD);
+        Employee groupLead1= employeeFactory.createEmployee("Dorian McKinley", GroupName.ALL);
 
-        office.eachMonthSalary(salespeople1);
+        office.computeEachMonthSalary(salespeople1);
 
-        office.eachMonthSalary(officeWorker1);
+        office.computeEachMonthSalary(officeWorker1);
 
-        office.eachMonthSalary(groupLead1);
+        office.computeEachMonthSalary(groupLead1);
     }
 
 }
